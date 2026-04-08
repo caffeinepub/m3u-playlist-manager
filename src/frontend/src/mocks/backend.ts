@@ -1,0 +1,58 @@
+import type { backendInterface } from "../backend";
+
+export const mockBackend: backendInterface = {
+  addChannel: async (_input) => BigInt(3),
+  clearChannels: async () => undefined,
+  deleteChannel: async (_id) => true,
+  getChannel: async (_id) => null,
+  importChannels: async (_inputs) => BigInt(0),
+  listChannels: async () => [
+    {
+      id: BigInt(1),
+      name: "BBC World News",
+      url: "http://feeds.bbci.co.uk/news/rss.xml",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/BBC_World_News_2022.svg/200px-BBC_World_News_2022.svg.png",
+      group: "News",
+      order: BigInt(1),
+      userAgent: "",
+    },
+    {
+      id: BigInt(2),
+      name: "CNN International",
+      url: "http://rss.cnn.com/rss/edition.rss",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/CNN.svg/200px-CNN.svg.png",
+      group: "News",
+      order: BigInt(2),
+      userAgent: "",
+    },
+    {
+      id: BigInt(3),
+      name: "Al Jazeera English",
+      url: "https://www.aljazeera.com/xml/rss/all.xml",
+      logo: "",
+      group: "News",
+      order: BigInt(3),
+      userAgent: "Mozilla/5.0",
+    },
+    {
+      id: BigInt(4),
+      name: "ESPN Live Sports",
+      url: "http://a.espncdn.com/public/m3u8/espnlive.m3u8",
+      logo: "",
+      group: "Sports",
+      order: BigInt(4),
+      userAgent: "",
+    },
+    {
+      id: BigInt(5),
+      name: "Discovery Channel",
+      url: "http://example.com/discovery.m3u8",
+      logo: "",
+      group: "Entertainment",
+      order: BigInt(5),
+      userAgent: "",
+    },
+  ],
+  reorderChannels: async (_entries) => undefined,
+  updateChannel: async (_update) => true,
+};

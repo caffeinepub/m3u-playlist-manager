@@ -1,0 +1,23 @@
+{
+  "overview": "A web app for managing and editing M3U playlists — import files or URLs, edit channels, organize by group, validate stream URLs, and export updated playlists.",
+  "features": [
+    "Import M3U files from upload or URL",
+    "Edit channels with name, group, URL, logo, and user-agent",
+    "Filter and search channels by name or group",
+    "Drag-and-drop channel reordering",
+    "Batch URL stream validation",
+    "Export playlist as .m3u file download",
+    "Bulk group assignment",
+    "Channel count and group statistics"
+  ],
+  "category": "productivity",
+  "tags": [
+    "m3u",
+    "playlist",
+    "iptv",
+    "media",
+    "streaming",
+    "editor"
+  ],
+  "last_updated": "2026-04-08T17:18:54.180Z"
+}

@@ -1,0 +1,45 @@
+type ReorderEntry = 
+ record {
+   id: ChannelId;
+   order: nat;
+ };
+type ChannelUpdate = 
+ record {
+   group: text;
+   id: ChannelId;
+   logo: text;
+   name: text;
+   order: nat;
+   url: text;
+   userAgent: text;
+ };
+type ChannelInput = 
+ record {
+   group: text;
+   logo: text;
+   name: text;
+   order: nat;
+   url: text;
+   userAgent: text;
+ };
+type ChannelId = nat;
+type Channel = 
+ record {
+   group: text;
+   id: ChannelId;
+   logo: text;
+   name: text;
+   order: nat;
+   url: text;
+   userAgent: text;
+ };
+service : {
+  addChannel: (input: ChannelInput) -> (ChannelId);
+  clearChannels: () -> ();
+  deleteChannel: (id: ChannelId) -> (bool);
+  getChannel: (id: ChannelId) -> (opt Channel) query;
+  importChannels: (inputs: vec ChannelInput) -> (nat);
+  listChannels: () -> (vec Channel) query;
+  reorderChannels: (entries: vec ReorderEntry) -> ();
+  updateChannel: (update: ChannelUpdate) -> (bool);
+}
